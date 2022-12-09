@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--
+      New Perspectives on HTML5 and CSS3, 7th Edition
+      Tutorial 7
+      Case Problem 3
+
+      CSS Demo Form
+      Author: Hesbon Osoro
+      Date: 12/9/22  
+
+      Filename:   wm_demo.html
+
+   -->
+
+    <meta charset="utf-8" />
+    <title>CSS Styles Demo</title>
+    <link href="wm_reset.css" rel="stylesheet" />
+    <link href="wm_styles.css" rel="stylesheet" />
+    <link href="wm_forms.css" rel="stylesheet" />
+    <script src="wm_script.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <img src="wm_logo.png" alt="WidgetMage" />
+      <nav class="horizontal">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Tutorials</a></li>
+          <li><a href="#">Widgets</a></li>
+          <li><a href="#">Forums</a></li>
+          <li><a href="#">Demos</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <nav class="vertical">
+      <ul>
+        <li class="newgroup"><a href="#">Home</a></li>
+        <li class="newgroup"><a href="#">Animations</a></li>
+        <li><a href="#">Buttons</a></li>
+        <li><a href="#">Calendars</a></li>
+        <li><a href="#">Cookies</a></li>
+        <li><a href="#">Drag &amp; Drop</a></li>
+        <li><a href="#">Image Tools</a></li>
+        <li><a href="#">Icons</a></li>
+        <li><a href="#">Layout Tools</a></li>
+        <li><a href="#">List Boxes</a></li>
+        <li><a href="#">Menus</a></li>
+        <li><a href="#">Popups</a></li>
+        <li><a href="#">Ribbons</a></li>
+        <li><a href="#">Sliders</a></li>
+        <li><a href="#">Spinners</a></li>
+        <li><a href="#">Toolbars</a></li>
+        <li><a href="#">Tooltips</a></li>
+        <li><a href="#">Tree Views</a></li>
+        <li class="newgroup"><a href="#">Tutorials</a></li>
+        <li><a href="#">Tips &amp; Tricks</a></li>
+        <li><a href="#">White Papers</a></li>
+        <li><a href="#">User Forums</a></li>
+        <li><a href="#">External Links</a></li>
+        <li class="newgroup"><a href="#">Demonstrations</a></li>
+        <li class="newgroup"><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <section>
+      <h1>CSS Demo</h1>
+      <form>
+        <textarea
+          id="sampleBox"
+          name="sampleText"
+          placeholder="Enter sample text and press the Tab key"
+          autofocus
+          tabindex="1"
+          wrap="hard"
+        ></textarea>
+        <p>
+          Select the CSS style values from the form below and preview the effect
+          on the sample text in the preview box.
+        </p>
+        <fieldset>
+          <legend>Fonts</legend>
+          <label>Font Family</label>
+          <select id="fontfamily" name="fontfamily" tabindex="2">
+            <optgroup label="generic">
+              <option value="default">default</option>
+              <option value="serif">serif</option>
+              <option value="sans-serif">sans-serif</option>
+              <option value="monospace">monospace</option>
+              <option value="cursive">cursive</option>
+              <option value="fantasy">fantasy</option>
+            </optgroup>
+            <optgroup label="specific">
+              <option value="Arial">Arial</option>
+              <option value="'Book Antiqua'">'Book Antiqua'</option>
+              <option value="'Courier New'">'Courier New'</option>
+              <option value="Geneva">Geneva</option>
+              <option value="Helvetica">Helvetica</option>
+              <option value="Impact">Impact</option>
+              <option value="Palatino">Palatino</option>
+              <option value="Tahoma">Tahoma</option>
+              <option value="'Times New Roman'">'Times New Roman'</option>
+            </optgroup>
+          </select>
+
+          <label>Font Style</label>
+          <select name="fontstyle" id="fontstyle">
+            <option value="normal">normal</option>
+            <option value="italic">italic</option>
+            <option value="oblique">oblique</option>
+          </select>
+          <label>Font Weight</label>
+          <select name="fontweight" id="fontweight">
+            <option value="normal">normal</option>
+            <option value="italic">italic</option>
+          </select>
+          <label>Text Decoration</label>
+          <select name="textdecoration" id="textdecoration">
+            <option value="normal">none</option>
+            <option value="bold">line-through</option>
+            <option value="bold">overline</option>
+            <option value="bold">underline</option>
+          </select>
+          <label>Text Transform</label>
+          <select name="texttransform" id="texttransform">
+            <option value="normal">none</option>
+            <option value="bold">capitalize</option>
+            <option value="bold">lowercase</option>
+            <option value="bold">uppercase</option>
+          </select>
+
+          <label>Fonts Variant</label>
+          <select name="fontsvariant" id="fontvariant">
+            <option value="normal">normal</option>
+            <option value="bold">small-caps</option>
+          </select>
+        </fieldset>
+        <fieldset id="colors">
+          <legend>Colors</legend>
+          <label>Font Color (hexadecimal)</label>
+          <input type="color" value="#000000" />
+          <label>Font Color (hexadecimal)</label>
+          <input type="color" value="#FFFFFF" placeholder="#rrggbb" />
+        </fieldset>
+        <fieldset>
+          <legend>Sizes</legend>
+          <label>Font Size (px)</label>
+          <div class="slider">
+            8<input type="range" min="8" max="40" step="1" value="14" />40
+          </div>
+          <label>Letter Spacing (px)</label>
+          <div class="slider">
+            0<input type="range" min="0" max="10" step="1" value="0" />10
+          </div>
+          <label>Word Spacing (px)</label>
+          <div class="slider">
+            0<input type="range" min="0" max="10" step="1" value="0" />10
+          </div>
+          <label>Line Height (em)</label>
+          <div class="slider">
+            0<input type="range" min="0" max="4" step="0.2" value="1" />4
+          </div>
+          <label>Text Indent (px)</label>
+          <div class="slider">
+            0<input type="range" min="0" max="10" step="1" value="0" />10
+          </div>
+        </fieldset>
+      </form>
+
+      <h2>Rendered Text</h2>
+      <div id="output"></div>
+    </section>
+  </body>
+</html>
